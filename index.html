@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora Produção Cana</title>
+<style>
+body { font-family: Arial; max-width: 400px; margin: 30px auto; padding: 20px; }
+input, button { width: 100%; padding: 10px; margin: 5px 0; }
+button { background: #2e7d32; color: white; border: none; cursor: pointer; }
+</style>
+</head>
+<body>
+<h2>Calculadora de Produção - Cana</h2>
+<input type="number" id="ton" placeholder="Toneladas de cana">
+<input type="number" id="rend" placeholder="Rendimento % (ex: 85)">
+<button onclick="calcular()">Calcular</button>
+<p id="resultado"></p>
+<script>
+function calcular() {
+  const ton = parseFloat(document.getElementById('ton').value);
+  const rend = parseFloat(document.getElementById('rend').value);
+  if(!ton || !rend) { alert('Preencha os dois campos'); return; }
+  const litros = ton * 1000 * (rend/
