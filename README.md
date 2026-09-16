@@ -1,7 +1,8 @@
-# Controle de Turno - Usina
-Sistema simples para registrar turnos de funcionários.
-Tecnologias: Python, CSV
+# Calculadora Produção - Cana
+Calculadora simples para estimar produção de álcool a partir de toneladas de cana.
+
+Tecnologias: HTML, CSS, JavaScript
+
 Funcionalidades:
-- Registrar nome, turno e horas
-- Listar histórico
-- Dados salvos em turnos.csv
+- Entrada de toneladas e rendimento
+- Cálculo de estimativa em litros
