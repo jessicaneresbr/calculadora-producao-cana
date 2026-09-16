@@ -6,8 +6,9 @@
 <title>Calculadora Produção Cana</title>
 <style>
 body { font-family: Arial; max-width: 400px; margin: 30px auto; padding: 20px; }
-input, button { width: 100%; padding: 10px; margin: 5px 0; }
+input, button { width: 100%; padding: 12px; margin: 8px 0; font-size: 16px; box-sizing: border-box; }
 button { background: #2e7d32; color: white; border: none; cursor: pointer; }
+#resultado { font-weight: bold; margin-top: 15px; font-size: 18px; }
 </style>
 </head>
 <body>
@@ -18,7 +19,12 @@ button { background: #2e7d32; color: white; border: none; cursor: pointer; }
 <p id="resultado"></p>
 <script>
 function calcular() {
-  const ton = parseFloat(document.getElementById('ton').value);
-  const rend = parseFloat(document.getElementById('rend').value);
+  var ton = parseFloat(document.getElementById('ton').value);
+  var rend = parseFloat(document.getElementById('rend').value);
   if(!ton || !rend) { alert('Preencha os dois campos'); return; }
-  const litros = ton * 1000 * (rend/
+  var litros = ton * 1000 * (rend/100) * 0.85;
+  document.getElementById('resultado').innerText = "Estimativa: " + Math.round(litros) + " litros de álcool";
+}
+</script>
+</body>
+</html>
